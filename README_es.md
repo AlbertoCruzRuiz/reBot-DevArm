@@ -1,7 +1,7 @@
 # 🦾 reBot-DevArm: Brazo Robótico de Código Abierto para Todos los Desarrolladores
 
 <p align="center">
-  <img src="./media/v1.0.png" alt="Banner de reBot-DevArm">
+  <img src="./media/v1.1.png" alt="Banner de reBot-DevArm">
 </p>
 
 <p align="center">

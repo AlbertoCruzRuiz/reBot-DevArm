@@ -1,7 +1,7 @@
 # 🦾 reBot-DevArm：すべての開発者のためのオープンソースロボットアーム
 
 <p align="center">
-  <img src="./media/v1.0.png" alt="reBot-DevArm バナー">
+  <img src="./media/v1.1.png" alt="reBot-DevArm バナー">
 </p>
 
 <p align="center">

@@ -1,7 +1,7 @@
 # 🦾 reBot-DevArm : bras robotique open source pour tous les développeurs
 
 <p align="center">
-  <img src="./media/v1.0.png" alt="Bannière reBot-DevArm">
+  <img src="./media/v1.1.png" alt="Bannière reBot-DevArm">
 </p>
 
 <p align="center">

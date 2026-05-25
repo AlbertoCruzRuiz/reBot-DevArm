@@ -2,7 +2,7 @@
 # 🦾 reBot-DevArm: Open Source Robotic Arm for All Developers
 
 <p align="center">
-  <img src="./media/v1.0.png" alt="reBot-DevArm Banner">
+  <img src="./media/v1.1.png" alt="reBot-DevArm Banner">
 </p>
 
 <p align="center">
