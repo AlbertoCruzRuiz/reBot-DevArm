@@ -108,6 +108,10 @@ We are committed to continuously maintaining and adapting to mainstream robot de
 | **Gradual Updates of the Latest Algorithms** | ⏳ Planned | Mainstream algorithms will be updated progressively | Ongoing |
 | **Launch of a Series of Completely Free Courses** | ⏳ Planned | Mainstream algorithms will be updated progressively | Ongoing |
 
+#### Contributions from Developers 
+| Supported Ecosystem | Authors | Description / Estimated Release Date | Related Documentation or Repository |
+| :--- | :---: | :--- | :--- | 
+|  | | |
 
 ### reBot Arm B601 RS
 
