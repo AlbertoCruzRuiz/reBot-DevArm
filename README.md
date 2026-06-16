@@ -2,7 +2,7 @@
 # 🦾 reBot-DevArm: Open Source Robotic Arm for All Developers
 
 <p align="center">
-  <img src="./media/v1.1.png" alt="reBot-DevArm Banner">
+  <img src="./media/RS5_56.png" alt="reBot-DevArm Banner">
 </p>
 
 <p align="center">
@@ -134,16 +134,16 @@ We are committed to continuously maintaining and adapting to mainstream robot de
 
 reBot-DevArm is designed for desktop Embodied AI applications, balancing payload capacity with flexibility.
 
-| Parameter | reBot Arm B601-DM |
-| :--- | :--- |
-| **Recommended Continuous Payload** | Less than 1.5 kg within 70% of arm reach workspace |
-| **Recommended Payload** | **1.5 kg** |
-| **Max Reach** | **650 mm** |
-| **Weight** | Approx. 4.5 kg |
-| **Repeatability** | < 0.2 mm |
-| **Degrees of Freedom (DOF)** | 6 DOF + 1 Gripper (Open source CAN servo gripper and joint motor gripper coming soon) |
-| **Supported Platforms/Ecosystems** | ROS1, ROS2, LeRobot, Pinocchio, Isaac Sim, Python SDK |
-| **Supply Voltage** | DC 24V |
+| Parameter | reBot Arm B601-DM | reBot Arm B601-RS|
+| :--- | :--- | :--- |
+| **Payload** | 1.5kg | **2.5kg** |
+| **Recommended Workspace** | 70% arm reach workspace | 70% arm reach workspace |
+| **Max Reach** | 650 mm | **754 mm** |
+| **Weight** | **Approx. 4.5 kg** | Approx. 6.7 kg |
+| **Repeatability** | < 0.2 mm | < 0.2 mm |
+| **Degrees of Freedom (DOF)** | 6 DOF + 1 Gripper | 6 DOF + 1 Gripper |
+| **Supported Platforms/Ecosystems** | ROS1, ROS2, LeRobot, Pinocchio, Isaac Sim, Python SDK | ROS1, ROS2, LeRobot, Pinocchio, Isaac Sim, Python SDK |
+| **Supply Voltage** | DC 24V | DC 48V |
 
 ## Feedback from the community
 | <img src="/community/GEM-4.png" height="100"> | <img src="/community/from_Linyan.png" height="100">   |<img src="/community/from_Diddi.png" height="100">  |<img src="/community/from_Henderson.jpg" height="100">  | <img src="/community/from_Sameer.png" height="100">|
