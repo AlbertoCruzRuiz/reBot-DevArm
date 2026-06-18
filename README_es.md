@@ -110,7 +110,7 @@ Estamos comprometidos a mantener y adaptarnos continuamente a los ecosistemas pr
 | **Video de ensamblaje**                 | 🚧 En progreso | Guía de ensamblaje detallada                | [Expected 2026.05]                                           |
 | **ROS2 (Humble)**                       |  ⏳ Planificado | Drivers listos, optimización en curso       | [Expected 2026.05]                                              |
 | **Integración con LeRobot**             |  ⏳ Planificado | Framework de aprendizaje robótico           | [Expected 2026.05]                                              |
-| **Integración con Pinocchio**           |  ⏳ Planificado | Cinemática y compensación de gravedad       | [Expected 2026.05]                                              |
+| **Integración con Pinocchio**           |  ✅ Completado | Cinemática y compensación de gravedad       | [Introducción a Pinocchio y MeshCat para reBot Arm B601-DM](https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_pinocchio_meshcat/) y [Github Código de control](https://github.com/vectorBH6/reBotArm_control_py)                                              |
 | **Simulación en Isaac Sim**             |  ⏳ Planificado | Simulación robótica                         | [Expected 2026.05]                                              |
 | **Actualización de algoritmos**         |  ⏳ Planificado | Actualizaciones continuas                   | Ongoing                                                         |
 | **Cursos gratuitos**                    |  ⏳ Planificado | Cursos abiertos                             | Ongoing                                                         |

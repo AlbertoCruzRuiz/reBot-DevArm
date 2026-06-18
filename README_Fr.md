@@ -110,7 +110,7 @@ Nous nous engageons à maintenir et à adapter en continu les principaux écosys
 | **Vidéo d’assemblage** | 🚧 En cours | Étapes d’assemblage ultra détaillées et vidéo | [Prévu 2026.05] |
 | **ROS2 (Humble)** | ⏳ Planifié | Les pilotes principaux sont terminés, et MoveIt2 est actuellement en cours d’optimisation | [Prévu 2026.05] |
 | **Intégration LeRobot** | ⏳ Planifié | Adaptation au framework d’entraînement Hugging Face LeRobot | [Prévu 2026.05] |
-| **Intégration Pinocchio** | ⏳ Planifié | Adaptation au framework Pinocchio, permettant la cinématique directe/inverse et la compensation gravitationnelle pour le bras robotique | [Prévu 2026.05] |
+| **Intégration Pinocchio** | ✅ Terminé | Adaptation au framework Pinocchio, permettant la cinématique directe/inverse et la compensation gravitationnelle pour le bras robotique | [Getting Started with Pinocchio for reBot Arm B601-DM](https://wiki.seeedstudio.com/rebot_arm_b601_rs_pinocchio_meshcat/) ainsi que [Github code de contrôle](https://github.com/vectorBH6/reBotArm_control_py) |
 | **Simulation Isaac Sim** | ⏳ Planifié | Importation de modèles USD et activation de la téléopération simulée | [Prévu 2026.05] |
 | **Mises à jour progressives des derniers algorithmes** | ⏳ Planifié | Les algorithmes grand public seront mis à jour progressivement | En continu |
 | **Lancement d’une série de cours entièrement gratuits** | ⏳ Planifié | Les algorithmes grand public seront mis à jour progressivement | En continu |
