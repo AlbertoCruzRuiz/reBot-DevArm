@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="../../media/RS5_56.png" alt="Banner de reBot-DevArm">
+  <img src="../../media/RS5_56.webp" alt="Banner de reBot-DevArm">
 </p>
 <p align="center">
   <strong>

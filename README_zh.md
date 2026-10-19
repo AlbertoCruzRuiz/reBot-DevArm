@@ -4,7 +4,7 @@
 
 **为每个开发者打造的开源机械臂**
 
-<img src="./media/RS5_56.png" alt="reBot-DevArm Banner" width="1000">
+<img src="./media/RS5_56.webp" alt="reBot-DevArm Banner" width="1000">
 
 <a href="https://certification.oshwa.org/cn000024.html"><img src="./media/certification-mark-CN000024-wide.png" alt="OSHWA 开源认证" width="180"></a>
 
@@ -17,7 +17,7 @@
 
 **100% 全开源 · 具身智能 · 软硬一体 · [商用宽松条件请看这里](#权利与限制说明)**
 
-🌐 [落地页](https://279070161-sketch.github.io/reBot/) · 📚 [教程中心](https://wiki.seeedstudio.com/robotics_page/) · ▶ [在线体验](https://yang-ci.github.io/Rebot_Arm_AGV/)
+🌐 [落地页](https://279070161-sketch.github.io/reBot/) · 📚 [教程中心](https://wiki.seeedstudio.com/robotics_page/) · ▶ [在线体验](https://seeed-projects.github.io/reBot_RS_Sim)
 
 [![Discord](https://img.shields.io/discord/1409155673572249672?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.gg/AbGuqJhDpQ)
 [![文档](https://img.shields.io/badge/Documentation-%F0%9F%93%95-blue)](https://wiki.seeedstudio.com/robotics_page/)
@@ -90,7 +90,7 @@ RS 版本提供两种套件方案：
 无需安装，直接在浏览器体验 reBot Arm B601-RS 的 MuJoCo 数字孪生。可切换标准机械臂与 AGV 配置、控制关节与 TCP、查看全局相机与 D405 腕部相机，并运行自动归位抓取与叠叠乐演示。首次加载模型资源可能需要片刻，建议使用 Chrome 或 Edge。
 
 <p align="center">
-  <a href="https://yang-ci.github.io/Rebot_Arm_AGV/"><strong>▶ 立即启动 reBot Arm 在线交互演示</strong></a>
+  <a href="https://seeed-projects.github.io/reBot_RS_Sim"><strong>▶ 立即启动 reBot Arm 在线交互演示</strong></a>
 </p>
 
 ## 🗺️ 开源路线图

@@ -1,7 +1,7 @@
 # 🤖 Spécification matérielle open source du reBot DevArm
 
 <p align="center">
-  <img src="../../media/RS5_56.png" alt="Bannière reBot-DevArm">
+  <img src="../../media/RS5_56.webp" alt="Bannière reBot-DevArm">
 </p>
 <p align="center">
   <strong>
