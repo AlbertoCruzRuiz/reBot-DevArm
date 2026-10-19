@@ -4,7 +4,7 @@
 
 **The Open-Source Robotic Arm for Every Developer**
 
-<img src="./media/RS5_56.png" alt="reBot-DevArm Banner" width="1000">
+<img src="./media/RS5_56.webp" alt="reBot-DevArm Banner" width="1000">
 
 <a href="https://certification.oshwa.org/cn000024.html"><img src="./media/certification-mark-CN000024-wide.png" alt="OSHWA Certified" width="180"></a>
 
@@ -17,7 +17,7 @@
 
 **100% Open Source · Embodied AI · Full Hardware + Software Stack**
 
-🌐 [Landing Page](https://279070161-sketch.github.io/reBot/) · 📚 [Tutorial Center](https://wiki.seeedstudio.com/robotics_page/) · ▶ [Online Demo](https://yang-ci.github.io/Rebot_Arm_AGV/)
+🌐 [Landing Page](https://279070161-sketch.github.io/reBot/) · 📚 [Tutorial Center](https://wiki.seeedstudio.com/robotics_page/) · ▶ [Online Demo](https://seeed-projects.github.io/reBot_RS_Sim)
 
 [![Discord](https://img.shields.io/discord/1409155673572249672?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.gg/AbGuqJhDpQ)
 [![Documentation](https://img.shields.io/badge/Documentation-%F0%9F%93%95-blue)](https://wiki.seeedstudio.com/robotics_page/)
@@ -90,7 +90,7 @@ Purchase the [Leader Arm](https://www.seeedstudio.com/Star-Arm-102-p-6765.html?q
 Experience the reBot Arm B601-RS MuJoCo digital twin directly in your browser — no installation required. Switch between the standard arm and AGV configurations, control joints and TCP, view the overhead and D405 wrist cameras, and run the automated put-away and stacking demos. The initial model download may take a moment; Chrome or Edge is recommended.
 
 <p align="center">
-  <a href="https://yang-ci.github.io/Rebot_Arm_AGV/"><strong>▶ Launch the reBot Arm Interactive Demo</strong></a>
+  <a href="https://seeed-projects.github.io/reBot_RS_Sim"><strong>▶ Launch the reBot Arm Interactive Demo</strong></a>
 </p>
 
 ## 🗺️ Roadmap and Status

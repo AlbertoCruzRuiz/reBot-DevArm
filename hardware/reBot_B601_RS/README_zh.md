@@ -1,7 +1,7 @@
 # 🤖 reBot DevArm 开源硬件规格说明
 
 <p align="center">
-  <img src="../../media/RS5_56.png" alt="reBot-DevArm Banner">
+  <img src="../../media/RS5_56.webp" alt="reBot-DevArm Banner">
 </p>
 <p align="center">
   <strong>

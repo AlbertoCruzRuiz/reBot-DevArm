@@ -4,7 +4,7 @@
 
 **Le bras robotique open source pour tous les développeurs**
 
-<img src="./media/RS5_56.png" alt="reBot-DevArm Banner" width="1000">
+<img src="./media/RS5_56.webp" alt="reBot-DevArm Banner" width="1000">
 
 <a href="https://certification.oshwa.org/cn000024.html"><img src="./media/certification-mark-CN000024-wide.png" alt="Certification OSHWA" width="180"></a>
 
@@ -17,7 +17,7 @@
 
 **100% open source · IA incarnée · Stack complet matériel + logiciel**
 
-🌐 [Page d'accueil](https://279070161-sketch.github.io/reBot/) · 📚 [Centre de tutoriels](https://wiki.seeedstudio.com/robotics_page/) · ▶ [Démo en ligne](https://yang-ci.github.io/Rebot_Arm_AGV/)
+🌐 [Page d'accueil](https://279070161-sketch.github.io/reBot/) · 📚 [Centre de tutoriels](https://wiki.seeedstudio.com/robotics_page/) · ▶ [Démo en ligne](https://seeed-projects.github.io/reBot_RS_Sim)
 
 [![Discord](https://img.shields.io/discord/1409155673572249672?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.gg/AbGuqJhDpQ)
 [![Documentation](https://img.shields.io/badge/Documentation-%F0%9F%93%95-blue)](https://wiki.seeedstudio.com/robotics_page/)
@@ -90,7 +90,7 @@ Achetez le [Leader Arm](https://www.seeedstudio.com/Star-Arm-102-p-6765.html?qid
 Découvrez le jumeau numérique MuJoCo du reBot Arm B601-RS directement dans votre navigateur, sans installation. Basculez entre le bras standard et la configuration AGV, contrôlez les articulations et le TCP, affichez les caméras globale et de poignet D405, puis lancez les démonstrations automatiques de rangement et d'empilage. Le premier chargement du modèle peut prendre un instant ; Chrome ou Edge est recommandé.
 
 <p align="center">
-  <a href="https://yang-ci.github.io/Rebot_Arm_AGV/"><strong>▶ Lancer la démo interactive reBot Arm</strong></a>
+  <a href="https://seeed-projects.github.io/reBot_RS_Sim"><strong>▶ Lancer la démo interactive reBot Arm</strong></a>
 </p>
 
 ## 🗺️ Feuille de route
