@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🦾 reBot-DevArm
+# 🦾 reBot-Arm-Base-Series
 
 **为每个开发者打造的开源机械臂**
 
