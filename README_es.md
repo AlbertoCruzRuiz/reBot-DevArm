@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🦾 reBot-Arm-Base-Series
+# 🦾 reBot Arm Base Series
 
 **El brazo robótico de código abierto para todos los desarrolladores**
 

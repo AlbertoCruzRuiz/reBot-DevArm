@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🦾 reBot-Arm-Base-Series
+# 🦾 reBot Arm Base Series
 
 **すべての開発者のためのオープンソースロボットアーム**
 
