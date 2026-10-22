@@ -138,6 +138,7 @@ RS 版本提供两种套件方案：
 | 对应生态 | 作者 | 说明 | 仓库 |
 | :--- | :---: | :--- | :--- |
 | iPhone、HEBI Mobile I/O 与 Meta Quest 遥操作 | [@ammarjmahmood](https://github.com/ammarjmahmood) | 移动手机或 Quest 手柄，夹爪随之运动，采用 TidyBot++（CoRL 2024）的相对位姿映射：原生 SwiftUI 与 ARKit iPhone 应用、HEBI Mobile I/O、Quest WebXR 透视模式，200 Hz MIT 驱动、重力前馈、基于官方 RS URDF 的逆运动学与安全联锁。已在 B601-RS 与 iPhone 16 Pro Max 上测试。 | [rebot-phone-teleop](https://github.com/ammarjmahmood/rebot-phone-teleop) |
+| 掌上交互终端，Zephyr RTOS / CAN / ROS 2 | [@xiayip](https://github.com/xiayip) | 面向 reBot Arm RS 的掌上交互终端，支持关节实时监测、编码器位置控制、阻尼/阻抗模式、拖动示教与轨迹回放、Flash 持久化保存，以及 ROS 2 控制器切换请求。 | [reBot_Arm_HMI](https://github.com/xiayip/reBot_Arm_HMI) · [实机演示](https://www.bilibili.com/video/BV1MNnw6gEEe/) |
 
 ## ⚙️ 硬件参数
 

@@ -144,6 +144,7 @@ We continuously maintain and adapt to mainstream robot development ecosystems. B
 | Ecosystem | Author | Description | Repository |
 | :--- | :---: | :--- | :--- |
 | iPhone, HEBI Mobile I/O and Meta Quest teleoperation | [@ammarjmahmood](https://github.com/ammarjmahmood) | Move a phone or a Quest controller and the gripper follows, using the relative pose mapping from TidyBot++ (CoRL 2024): native SwiftUI and ARKit iPhone app, HEBI Mobile I/O, WebXR passthrough on Quest, a 200 Hz MIT driver with gravity feedforward, IK on the official RS URDF and safety interlocks. Tested on a B601-RS with an iPhone 16 Pro Max. | [rebot-phone-teleop](https://github.com/ammarjmahmood/rebot-phone-teleop) |
+| Handheld HMI, Zephyr RTOS / CAN / ROS 2 | [@xiayip](https://github.com/xiayip) | A handheld terminal for reBot Arm RS with live joint telemetry, encoder-based position control, damping/impedance modes, hand-guided trajectory recording and replay, persistent Flash storage, and ROS 2 controller-switch requests. | [reBot_Arm_HMI](https://github.com/xiayip/reBot_Arm_HMI) · [Video demo](https://www.bilibili.com/video/BV1MNnw6gEEe/) |
 
 ## ⚙️ Hardware Specifications
 
