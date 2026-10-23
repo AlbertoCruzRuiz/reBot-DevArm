@@ -11,6 +11,7 @@ This directory contains the self-contained B601-DM mechanical description resour
 
 ```text
 DM/
+├── mjcf/                 # MJCF XML and source metadata
 ├── urdf/
 │   └── ReBot_Arm_DM.urdf
 └── meshes/
@@ -35,3 +36,7 @@ from pathlib import Path
 
 urdf_path = Path("Rebot_Arm_description/DM/urdf/ReBot_Arm_DM.urdf")
 ```
+
+## MJCF / MuJoCo
+
+The complete model and scene XML files are in [`mjcf/`](mjcf/). Copy this entire arm directory to preserve relative mesh references. See the parent [MuJoCo instructions](../README.md#mujoco) for model selection, loading and validation. Source commits and hashes are in [`../source.json`](../source.json). Existing DigitalTwin runtime projects are unchanged.

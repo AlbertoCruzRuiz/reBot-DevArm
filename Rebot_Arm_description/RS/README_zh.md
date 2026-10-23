@@ -11,16 +11,17 @@
 
 ```text
 RS/
+├── mjcf/                 # MJCF XML 与来源元数据
 ├── urdf/
 │   └── ReBot_Arm_RS.urdf
 └── meshes/
-    ├── visual/             # 仅用于渲染的 CNC、电机和 PLA 分件
+    ├── visual/             # 机械臂与腕部相机视觉件
     ├── shared/             # 同时用于渲染和 URDF 碰撞的整件网格
     └── mujoco_collision/   # MuJoCo 夹指精细碰撞网格
 ```
 
 - `urdf/ReBot_Arm_RS.urdf` 是当前 RS 主模型，包含机械臂与夹爪定义。
-- `meshes/visual/` 包含 22 个仅用于渲染和配色的 STL。
+- `meshes/visual/` 包含 54 个仅用于渲染和配色的 STL（含腕部相机视觉件）。
 - `meshes/shared/` 包含 10 个同时用于渲染和碰撞的 STL；RS 当前没有只用于 URDF 碰撞的独立网格。
 - `meshes/mujoco_collision/` 包含 10 个 MuJoCo 使用的夹指前、中、后段以及滑块、限位块碰撞网格。
 - URDF 使用 `../meshes/...` 相对路径，不依赖 ROS package URI，复制整个 `RS/` 目录即可使用。
@@ -33,3 +34,9 @@ from pathlib import Path
 
 urdf_path = Path("Rebot_Arm_description/RS/urdf/ReBot_Arm_RS.urdf")
 ```
+
+## MJCF / MuJoCo
+
+完整模型和场景 XML 位于 [`mjcf/`](mjcf/)。复制整个机械臂目录即可保留网格相对路径。模型选择、加载和校验方法见上一级 [MuJoCo 说明](../README_zh.md#mujoco)，来源提交与哈希见 [`../source.json`](../source.json)。现有数字孪生运行工程保持原样。
+
+RS 运行时来源注明原始模型来自 `LAN-GER/reBot-B601-RS-for-mujoco_sim` 的 `1249cb6efdf393ba636056fc41df30dc6ba389aa` 版本，并记载该上游版本没有 LICENSE 文件。本次归档保留这一来源记录。相机资源署名和许可证原文见 [`mjcf/THIRD_PARTY_MODELS.md`](mjcf/THIRD_PARTY_MODELS.md) 与 [`mjcf/licenses/`](mjcf/licenses/)。

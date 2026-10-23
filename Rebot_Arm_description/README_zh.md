@@ -7,7 +7,7 @@
   </strong>
 </p>
 
-`Rebot_Arm_description/` 汇总了 B601-RS 与 B601-DM 当前使用的 URDF、STL，以及 32×32 UVC、D405、D435i、Gemini 2 腕部相机装配资源，供 Web、RViz、ROS 2、MuJoCo 或其他机器人项目复用。
+`Rebot_Arm_description/` 汇总了 B601-RS 与 B601-DM 当前使用的 URDF、MJCF、STL，以及 32×32 UVC、D405、D435i、Gemini 2 腕部相机装配资源，供 Web、RViz、ROS 2、MuJoCo 或其他机器人项目复用。
 
 本目录采用相对路径，自带模型显示、URDF 碰撞和 MuJoCo 夹爪精细碰撞所需的网格。复制时建议保留整个版本目录，不要把 STL 全部摊平到同一层。
 
@@ -19,7 +19,9 @@
 Rebot_Arm_description/
 ├── README.md
 ├── README_zh.md
+├── source.json               # MJCF 来源版本与文件哈希
 ├── tools/
+│   ├── verify_models.py      # 引用、哈希及可选 MuJoCo 检查
 │   └── rviz_urdf_compat.py  # ROS 2 Jazzy RViz 多材质显示兼容处理
 ├── Camera/
 │   ├── README.md             # 简体中文 / English
@@ -33,15 +35,17 @@ Rebot_Arm_description/
 ├── RS/
 │   ├── README.md
 │   ├── README_zh.md
+│   ├── mjcf/                 # 机械臂、场景 XML 与来源说明
 │   ├── urdf/
 │   │   └── ReBot_Arm_RS.urdf
 │   └── meshes/
-│       ├── visual/             # 22 个：仅用于 RS 显示和配色
+│       ├── visual/             # 54 个：机械臂与腕部相机视觉件
 │       ├── shared/             # 10 个：RS URDF 显示与碰撞共用
 │       └── mujoco_collision/   # 10 个：RS MuJoCo 夹爪精细碰撞
 └── DM/
     ├── README.md
     ├── README_zh.md
+    ├── mjcf/                 # 彩色、STL、运动学及简化 XML
     ├── urdf/
     │   └── ReBot_Arm_DM.urdf
     └── meshes/
@@ -168,12 +172,40 @@ moveit_config.robot_description[description_key] = (
 
 ### MuJoCo
 
-本目录提供 MuJoCo 需要的 STL，但不包含完整 MJCF 场景。复用时应在 MJCF `<compiler meshdir="...">` 或 `<mesh file="...">` 中指向：
+两个机械臂目录都包含可直接加载的 MJCF XML 和全部依赖网格。复制完整 `RS/` 或 `DM/` 目录，并保留 `mjcf/` 与 `meshes/` 的相邻层级，即可独立加载，无需安装 ROS 或克隆数字孪生工程。
 
-- RS：`RS/meshes/mujoco_collision/` 中的 10 个精细碰撞件；
-- DM：`DM/meshes/mujoco_collision/` 的 6 个分段件，加上 `DM/meshes/shared/` 的 4 个滑块与限位块。
+| 机械臂 | MJCF 文件 | 用途 |
+| --- | --- | --- |
+| RS | [rs_arm.xml](RS/mjcf/rs_arm.xml) | 机械臂、夹爪及可切换腕部相机的视觉模型 |
+| RS | [rs_grasp_scene.xml](RS/mjcf/rs_grasp_scene.xml) | 引用 `rs_arm.xml`，增加抓取物体及俯视相机 |
+| DM | [rebotarm_b601_colored.xml](DM/mjcf/rebotarm_b601_colored.xml) | 默认彩色模型与抓取场景 |
+| DM | [rebotarm_b601_stl.xml](DM/mjcf/rebotarm_b601_stl.xml) | 原有单材质 STL 模型 |
+| DM | [rebotarm_b601_kinematic.xml](DM/mjcf/rebotarm_b601_kinematic.xml) | 原有基础几何运动学模型 |
+| DM | [simple_rebotarm.xml](DM/mjcf/simple_rebotarm.xml) | 原有简化模型 |
 
-不要用完整夹指的单一凸包替换这些分段网格，否则可能重新出现闭合穿模、接触面过大或夹持不稳定。
+在本目录下用 Python 加载所需模型：
+
+```python
+import mujoco
+
+model = mujoco.MjModel.from_xml_path("RS/mjcf/rs_grasp_scene.xml")
+data = mujoco.MjData(model)
+mujoco.mj_step(model, data)
+```
+
+RS 腕部相机的型号、几何分组和光学位姿记录在 [wrist_cameras.json](RS/mjcf/wrist_cameras.json)。切换型号属于应用层行为，单独加载 XML 时采用默认 D405。相机几何只参与显示，仿真视场角不代表实机标定。
+
+归档 XML 只调整网格引用路径，保留关节、执行器、惯量、接触、相机及场景定义。RS 的左右夹指映射保持原样。请保留完整的分段夹指网格，避免用单一凸包替换。
+
+在仓库根目录检查引用路径与文件哈希：
+
+```bash
+python3 Rebot_Arm_description/tools/verify_models.py
+# 可选：同时加载全部六个模型并进行短时仿真，需要 mujoco 和 numpy。
+python3 Rebot_Arm_description/tools/verify_models.py --mujoco
+```
+
+本次迁移已用 MuJoCo 3.10.0 验证：六个模型均能加载，编译后的模型数组与来源模型一致，运行 200 步后的状态也一致。这是加载与回归检查，不代表新增的抓取性能测试。
 
 ## 修改与同步规则
 
@@ -198,7 +230,10 @@ reBotArm_ros2_DM/src/rebotarm_bringup/description/
 reBotArm_ros2_DM/src/rebotarm_mujoco/models/
 ```
 
-`Rebot_Arm_description/` 是面向复用者整理的自包含副本。运行时源模型发生变化后，应同步更新这里的对应 URDF/STL，并重新执行引用完整性和仿真验证。
+`Rebot_Arm_description/` 是面向复用者整理的自包含副本。运行时源模型发生变化后，应审核并同步更新这里的对应 URDF/MJCF/STL，并重新执行引用完整性和仿真验证。
+
+
+归档 MJCF 及其引用资源的来源提交和 SHA-256 哈希见 [`source.json`](source.json)。现有数字孪生工程及其运行时模型路径保持原样，本次迁移不会让工程自动改为读取本目录。保留 [`RS/mjcf/THIRD_PARTY_MODELS.md`](RS/mjcf/THIRD_PARTY_MODELS.md)、其 `licenses/` 目录及 [`DM/mjcf/SOURCE_LICENSE.txt`](DM/mjcf/SOURCE_LICENSE.txt) 的来源声明。RS 来源 README 记载，原始模型在所列上游版本中没有许可证；本次归档保留这一记录，不为它另行指定许可证。相机来源继续见 [`Camera/source.json`](Camera/source.json)。
 
 ## 选择建议
 
