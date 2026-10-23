@@ -199,7 +199,7 @@ Les aperçus montrent les assemblages UVC32, D435i, D405 et Gemini 2 sur le B601
 | Doigt souple | Intégration compatible ouverte |
 | :--- | :--- |
 | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/Soft_Finger.png" height="100"> | Bientôt disponible |
-| [Support de doigt (ABS/PLA)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper_Mount.step) · [Doigt (TPU 95+)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper_Finger.step) | Bientôt disponible |
+| [Support de doigt (ABS/PLA)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Mount.step) · [Doigt (TPU 95+)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Finger.step) | Bientôt disponible |
 
 ### Matériel optionnel recommandé
 

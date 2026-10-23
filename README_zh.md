@@ -194,7 +194,7 @@ reBot-DevArm 专为桌面级具身智能应用设计，兼顾负载能力与灵�
 | 柔性手指 | 开放兼容集成拓展 |
 | :--- | :--- |
 | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/Soft_Finger.png" height="100"> | 敬请期待 |
-| [手指安装座（ABS/PLA）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper_Mount.step) · [柔性手指本体（TPU 95+）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper_Finger.step) | 敬请期待 |
+| [手指安装座（ABS/PLA）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Mount.step) · [柔性手指本体（TPU 95+）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Finger.step) | 敬请期待 |
 
 ### 推荐可选硬件
 

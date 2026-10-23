@@ -199,7 +199,7 @@
 | ソフトフィンガー | 互換性統合に対応可能 |
 | :--- | :--- |
 | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/Soft_Finger.png" height="100"> | 近日公開 |
-| [フィンガー取付台（ABS/PLA）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper_Mount.step) · [フィンガー本体（TPU 95+）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper_Finger.step) | 近日公開 |
+| [フィンガー取付台（ABS/PLA）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Mount.step) · [フィンガー本体（TPU 95+）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Finger.step) | 近日公開 |
 
 ### おすすめオプションパーツ
 
