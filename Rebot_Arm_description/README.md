@@ -7,7 +7,7 @@
   </strong>
 </p>
 
-`Rebot_Arm_description/` collects the URDF and STL resources currently used by the B601-RS and B601-DM, together with 32×32 UVC, D405, D435i and Gemini 2 wrist camera assemblies, for reuse in Web applications, RViz, ROS 2, MuJoCo, and other robotics projects.
+`Rebot_Arm_description/` collects the URDF, MJCF and STL resources currently used by the B601-RS and B601-DM, together with 32×32 UVC, D405, D435i and Gemini 2 wrist camera assemblies, for reuse in Web applications, RViz, ROS 2, MuJoCo, and other robotics projects.
 
 This directory uses relative paths and includes the meshes required for model rendering, URDF collision geometry, and detailed MuJoCo gripper collisions. When copying it, keep each complete model directory intact instead of flattening all STL files into a single directory.
 
@@ -19,7 +19,9 @@ This directory uses relative paths and includes the meshes required for model re
 Rebot_Arm_description/
 ├── README.md
 ├── README_zh.md
+├── source.json               # pinned MJCF provenance and file hashes
 ├── tools/
+│   ├── verify_models.py      # reference, hash and optional MuJoCo checks
 │   └── rviz_urdf_compat.py  # ROS 2 Jazzy RViz multi-material compatibility helper
 ├── Camera/
 │   ├── README.md             # 简体中文 / English
@@ -33,15 +35,17 @@ Rebot_Arm_description/
 ├── RS/
 │   ├── README.md
 │   ├── README_zh.md
+│   ├── mjcf/                 # arm XML, scene XML and source notices
 │   ├── urdf/
 │   │   └── ReBot_Arm_RS.urdf
 │   └── meshes/
-│       ├── visual/             # 22 meshes: RS rendering and colors only
+│       ├── visual/             # 54 meshes: arm and wrist-camera visuals
 │       ├── shared/             # 10 meshes: shared by RS URDF rendering and collision
 │       └── mujoco_collision/   # 10 meshes: detailed RS MuJoCo gripper collisions
 └── DM/
     ├── README.md
     ├── README_zh.md
+    ├── mjcf/                 # colored, STL, kinematic and simple XML
     ├── urdf/
     │   └── ReBot_Arm_DM.urdf
     └── meshes/
@@ -168,12 +172,40 @@ Install `tools/rviz_urdf_compat.py` together with the ROS package, and make sure
 
 ### MuJoCo
 
-This directory provides the STL files required by MuJoCo, but does not contain a complete MJCF scene. In the MJCF, use `<compiler meshdir="...">` or `<mesh file="...">` to reference:
+Each arm directory includes ready-to-load MJCF XML and all referenced meshes. Copy the complete `RS/` or `DM/` directory, preserving `mjcf/` next to `meshes/`. A ROS installation or DigitalTwin checkout is not required to load these models.
 
-- RS: all 10 detailed collision parts in `RS/meshes/mujoco_collision/`.
-- DM: the six segmented parts in `DM/meshes/mujoco_collision/` plus the four carriage and travel-stop parts in `DM/meshes/shared/`.
+| Arm | MJCF file | Purpose |
+| --- | --- | --- |
+| RS | [rs_arm.xml](RS/mjcf/rs_arm.xml) | Arm, gripper and switchable wrist-camera visuals |
+| RS | [rs_grasp_scene.xml](RS/mjcf/rs_grasp_scene.xml) | Includes `rs_arm.xml`; adds grasp objects and an overhead camera |
+| DM | [rebotarm_b601_colored.xml](DM/mjcf/rebotarm_b601_colored.xml) | Default colored model and grasp scene |
+| DM | [rebotarm_b601_stl.xml](DM/mjcf/rebotarm_b601_stl.xml) | Existing single-material STL model |
+| DM | [rebotarm_b601_kinematic.xml](DM/mjcf/rebotarm_b601_kinematic.xml) | Existing primitive-geometry kinematic model |
+| DM | [simple_rebotarm.xml](DM/mjcf/simple_rebotarm.xml) | Existing simplified model |
 
-Do not replace these segmented meshes with a single convex hull of the complete finger. Doing so may reintroduce interpenetration during closing, overly large contact surfaces, or unstable grasping.
+From this directory, load the selected model in Python:
+
+```python
+import mujoco
+
+model = mujoco.MjModel.from_xml_path("RS/mjcf/rs_grasp_scene.xml")
+data = mujoco.MjData(model)
+mujoco.mj_step(model, data)
+```
+
+RS wrist-camera variant names, geometry groups and optical poses are recorded in [wrist_cameras.json](RS/mjcf/wrist_cameras.json). Selecting a variant is application behavior; loading the XML alone uses the D405 default. Camera geometry is visual-only, and the simulation FOV is not a physical-device calibration.
+
+The archived XML changes mesh reference paths only. Joint, actuator, inertia, contact, camera and scene definitions are preserved. RS left/right finger mappings remain unchanged. Keep all segmented gripper meshes rather than substituting a single convex hull.
+
+Validate paths and pinned file hashes from the repository root:
+
+```bash
+python3 Rebot_Arm_description/tools/verify_models.py
+# Optional: also load and step all six models (requires mujoco and numpy).
+python3 Rebot_Arm_description/tools/verify_models.py --mujoco
+```
+
+The migration was checked with MuJoCo 3.10.0: all six models loaded, their compiled model arrays matched the source models, and 200 simulation steps produced matching states. This is a loading and regression check, not a new grasping-performance evaluation.
 
 ## Modification and synchronization rules
 
@@ -198,7 +230,10 @@ reBotArm_ros2_DM/src/rebotarm_bringup/description/
 reBotArm_ros2_DM/src/rebotarm_mujoco/models/
 ```
 
-`Rebot_Arm_description/` is a self-contained copy organized for reuse. When the runtime source models change, synchronize the corresponding URDF and STL files here, then rerun reference-integrity and simulation checks.
+`Rebot_Arm_description/` is a self-contained copy organized for reuse. When the runtime source models change, review and synchronize the corresponding URDF, MJCF and STL files here, then rerun reference-integrity and simulation checks.
+
+
+Pinned source commits and SHA-256 hashes for the archived MJCF and referenced resources are in [`source.json`](source.json). Existing DigitalTwin projects and their runtime model paths are unchanged; this migration does not make them automatically consume this package. The source notices in [`RS/mjcf/THIRD_PARTY_MODELS.md`](RS/mjcf/THIRD_PARTY_MODELS.md), its `licenses/` directory and [`DM/mjcf/SOURCE_LICENSE.txt`](DM/mjcf/SOURCE_LICENSE.txt) are retained. The RS source README reports no upstream license at its recorded original-model revision; archiving preserves that provenance and does not assign it a new license. Camera provenance remains in [`Camera/source.json`](Camera/source.json).
 
 ## Choosing a model
 

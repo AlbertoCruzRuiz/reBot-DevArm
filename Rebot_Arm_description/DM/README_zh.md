@@ -11,6 +11,7 @@
 
 ```text
 DM/
+├── mjcf/                 # MJCF XML 与来源元数据
 ├── urdf/
 │   └── ReBot_Arm_DM.urdf
 └── meshes/
@@ -35,3 +36,7 @@ from pathlib import Path
 
 urdf_path = Path("Rebot_Arm_description/DM/urdf/ReBot_Arm_DM.urdf")
 ```
+
+## MJCF / MuJoCo
+
+完整模型和场景 XML 位于 [`mjcf/`](mjcf/)。复制整个机械臂目录即可保留网格相对路径。模型选择、加载和校验方法见上一级 [MuJoCo 说明](../README_zh.md#mujoco)，来源提交与哈希见 [`../source.json`](../source.json)。现有数字孪生运行工程保持原样。
