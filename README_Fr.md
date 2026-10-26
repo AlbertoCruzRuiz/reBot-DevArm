@@ -155,7 +155,7 @@ Conçu pour des applications d'IA incarnée sur bureau, en équilibrant charge u
 | Espace de travail recommandé | 70 % de la portée du bras | 70 % de la portée du bras |
 | Portée maximale | 767 mm | **754 mm** |
 | Poids | **≈ 4,5 kg** | ≈ 6,7 kg |
-| Répétabilité | < 0,2 mm | < 0,2 mm |
+| Répétabilité  | < ±0.2 mm | < ±0.1 mm |
 | Degrés de liberté | 6 DOF + 1 pince | 6 DOF + 1 pince |
 | Écosystèmes pris en charge | ROS1, ROS2, LeRobot, Pinocchio, Isaac Sim, SDK Python | ROS1, ROS2, LeRobot, Pinocchio, Isaac Sim, SDK Python |
 | Tension d'alimentation | DC 24V | DC 48V |
