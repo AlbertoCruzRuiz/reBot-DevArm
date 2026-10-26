@@ -155,7 +155,7 @@
 | 推奨作業空間 | アーム到達範囲の 70% | アーム到達範囲の 70% |
 | 最大リーチ | 767 mm | **754 mm** |
 | 自重 | **約 4.5 kg** | 約 6.7 kg |
-| 繰り返し精度 | < 0.2 mm | < 0.2 mm |
+| 繰り返し精度  | < ±0.2 mm | < ±0.1 mm |
 | 自由度 | 6 DOF + 1 グリッパー | 6 DOF + 1 グリッパー |
 | 対応プラットフォーム | ROS1、ROS2、LeRobot、Pinocchio、Isaac Sim、Python SDK | ROS1、ROS2、LeRobot、Pinocchio、Isaac Sim、Python SDK |
 | 供給電圧 | DC 24V | DC 48V |
