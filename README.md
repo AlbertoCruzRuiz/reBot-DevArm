@@ -156,7 +156,7 @@ Designed for desktop Embodied AI applications, balancing payload and flexibility
 | Recommended Workspace | 70% of arm reach | 70% of arm reach |
 | Max Reach | 767 mm | **754 mm** |
 | Weight | **≈ 4.5 kg** | ≈ 6.7 kg |
-| Repeatability | < 0.2 mm | < 0.2 mm |
+| Repeatability | < ±0.2 mm | < ±0.1 mm |
 | Degrees of Freedom | 6 DOF + 1 Gripper | 6 DOF + 1 Gripper |
 | Supported Ecosystems | ROS1, ROS2, LeRobot, Pinocchio, Isaac Sim, Python SDK | ROS1, ROS2, LeRobot, Pinocchio, Isaac Sim, Python SDK |
 | Supply Voltage | DC 24V | DC 48V |
