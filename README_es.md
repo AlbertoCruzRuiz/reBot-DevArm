@@ -155,7 +155,7 @@ Diseñado para aplicaciones de IA corpórea de sobremesa, equilibrando carga út
 | Espacio de trabajo recomendado | 70% del alcance del brazo | 70% del alcance del brazo |
 | Alcance máximo | 767 mm | **754 mm** |
 | Peso | **≈ 4.5 kg** | ≈ 6.7 kg |
-| Repetibilidad | < 0.2 mm | < 0.2 mm |
+| Repetibilidad  | < ±0.2 mm | < ±0.1 mm |
 | Grados de libertad | 6 DOF + 1 pinza | 6 DOF + 1 pinza |
 | Ecosistemas compatibles | ROS1, ROS2, LeRobot, Pinocchio, Isaac Sim, SDK de Python | ROS1, ROS2, LeRobot, Pinocchio, Isaac Sim, SDK de Python |
 | Tensión de alimentación | DC 24V | DC 48V |
