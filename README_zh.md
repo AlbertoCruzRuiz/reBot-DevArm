@@ -150,7 +150,7 @@ reBot-DevArm 专为桌面级具身智能应用设计，兼顾负载能力与灵�
 | 推荐工作空间 | 70% 臂展工作空间 | 70% 臂展工作空间 |
 | 最大臂展 | 767 mm | **754 mm** |
 | 自重 | **约 4.5 kg** | 约 6.7 kg |
-| 重复定位精度 | < 0.2 mm | < 0.2 mm |
+| 重复定位精度  | < ±0.2 mm | < ±0.1 mm |
 | 自由度 | 6 DOF + 1 夹爪 | 6 DOF + 1 夹爪 |
 | 支持平台/生态 | ROS1、ROS2、LeRobot、Pinocchio、Isaac Sim、Python SDK | ROS1、ROS2、LeRobot、Pinocchio、Isaac Sim、Python SDK |
 | 供电电压 | DC 24V | DC 48V |
