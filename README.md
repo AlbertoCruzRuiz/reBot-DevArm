@@ -204,6 +204,9 @@ The previews show UVC32, D435i, D405 and Gemini 2 assemblies on B601-RS; the mou
 | :--- | :--- |
 | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/Soft_Finger.png" height="100"> | Coming soon |
 | [Finger Mount (ABS/PLA)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Mount.step) · [Finger (TPU 95+)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Finger.step) | Coming soon |
+| <img src="https://raw.githubusercontent.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper/main/bilder/spot.gif" height="100" alt="Touch-Sensing Fin-Ray Gripper"> | **[Touch-Sensing Fin-Ray Gripper](https://github.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper)** · [GitHub repo](https://github.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper) |
+
+
 
 ### Recommended Optional Hardware
 
