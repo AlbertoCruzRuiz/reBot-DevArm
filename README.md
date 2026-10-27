@@ -204,6 +204,8 @@ The previews show UVC32, D435i, D405 and Gemini 2 assemblies on B601-RS; the mou
 | :--- | :--- |
 | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/Soft_Finger.png" height="100"> | Coming soon |
 | [Finger Mount (ABS/PLA)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Mount.step) · [Finger (TPU 95+)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Finger.step) | Coming soon |
+| <img src="https://raw.githubusercontent.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper/main/bilder/greifer.gif" height="100" alt="Touch-Sensing Fin-Ray Gripper"> | **Touch-Sensing Fin-Ray Gripper** by [@StefanRohringer](https://github.com/StefanRohringer): four TPU Fin-Ray lamellae, each with a magnet and an MLX90393 3-axis magnetometer, so the gripper feels contact while closing and when placing. Mounts on the stock B601-DM jaws; optional PLA fingernail for 0603/0402 SMD parts. · [GitHub repo](https://github.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper) |
+
 
 ### Recommended Optional Hardware
 
